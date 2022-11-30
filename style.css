@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-image: linear-gradient(#262A4B, #794DE3);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.fake-logo{
+    opacity: 0;
+    pointer-events: none;
+}
+.container{
+    width: 1310px;
+    margin: 0 auto;
+}
+header.active{
+    z-index: 2;
+}
+.logo{
+    opacity: 0;
+    pointer-events: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    font-size: 16px;
+    position: fixed;
+    margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    z-index: 2;
+}
+header div ul li a{
+    color: #ededed;
+    transition: .5s;
+}
+header div ul li a:hover{
+    font-size: 20px;
+    transition: .5s;
+}
+header div ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+}
+header div ul li{
+    padding-right: 24px;
+}
+.navbar-menu{
+    color: #ededed;
+    font-size: 32px;
+    display: none;
+}
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    margin-top: 110px;
+}
+.text-1{
+    font-weight: 700;
+    font-size: 64px;
+    max-width: 420px;
+    color: #ededed;
+}
+.card-laptop{
+    width: 100%;
+    border-radius: 64px;
+    font-size: 48px;
+    color: #ededed;
+    font-weight: 600;
+    background-color: transparent;
+    height: 488px;
+    position: relative;
+    box-shadow: 0 8px 10px #794DE3;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+.card-laptop .laptop-img{
+    width: 378px;
+    position: absolute;
+    transform: translate(570px, -120px);
+    animation: laptopAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    left: 530px;
+    top: -70px;
+}
+.card-laptop p{
+    max-width: 400px;
+    transform: translate(93px, 108px);
+
+}
+.card-laptop a{
+    width: 295px;
+    height: 96px;
+    background-color: transparent;
+    color: #ededed;
+    border-radius: 32px;
+    border: none;
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    top: 290px;
+    left: 421px;
+    box-shadow: 0 8px 10px #eed00d26;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 1s;
+    z-index: 2;
+}
+.card-laptop a button{
+    background-color: transparent;
+    color: #ededed;
+    border-radius: 32px;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    height: 96px;
+}
+.card-laptop::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,#7a4de31d,transparent);
+    transform: skewX(45deg);
+    border-radius: 32px 0 0 32px;
+    z-index: -1;
+}
+.card-laptop a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,rgba(198, 179, 36, 0.3));
+    transform: skewX(45deg);
+    border-radius: 32px 0 0 32px;
+    cursor: pointer;
+}
+.card-laptop a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,rgba(198, 179, 36, 0.3),transparent);
+    border-radius: 32px 0 0 32px;
+    transition: .5s;
+    cursor: pointer;
+}
+.card-laptop a:hover::after{
+    left: 100%;
+}
+.card-laptop a:active{
+    transition: .5s;
+    box-shadow: inset 0 5px 10px #EED10D,0 3px 10px #EED10D;
+}
+
+
+
+#members{
+    margin-top: 120px;
+    padding-top: 80px;
+    margin-bottom: 100px;
+}
+#members .team-text{
+    color: #eed00d;
+    text-align: center;
+    height: 150px;
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg,transparent,#7a4de333,transparent);
+    box-shadow: 0 10px 10px #794DE3; 
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding-top: 15px;
+}
+#members .team-25{
+    color: #ededed;
+    text-align: center;
+    height: 60px;
+    font-size: 36px;
+    font-weight: 700;
+}
+#members .team-members-text{
+    color: #eed00d;
+    text-align: center;
+    height: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cards article{
+    margin-top: 60px;
+    width: 280px;
+    height: 400px;
+    background-color: transparent;
+    box-shadow: 0 10px 10px #794DE3; 
+    border-radius: 24px;
+    align-items: center;
+    text-align: center;  
+    display: flex;
+    flex-direction: column;
+    padding-top: 84px;
+    color: #ededed;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    cursor: pointer;
+    animation: cardsAnimation .5s infinite;
+}
+@keyframes cardsAnimation{
+    
+}
+.cards article::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,#7a4de333,transparent);
+    transform: skewX(30deg);
+    border-radius: 32px 0 0 32px;
+}
+.cards article::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,#7a4de333,transparent);
+    border-radius: 32px 0 0 32px;
+    transition: .5s;
+}
+.cards article:hover::after{
+    left: 100%;
+}
+.cards-logo div{
+    width: 100px;
+    height: 100px;
+    border-radius: 40px;
+}
+.cards-logo div img{
+    width: 100px;
+}
+.cards-text-1{
+    font-weight: 600;
+    font-size: 30px;
+    max-height: 86px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    text-shadow: 0 5px 5px #d5e037; 
+}
+.cards-text-2{
+    max-width: 294px;
+}
+#hour-of-code{
+    margin-top: 60px;
+    padding-top: 80px;
+}
+.hour-of-code-text-1{
+    color: #eed00d;
+    text-align: center;
+    height: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.members-information{
+    flex-direction: column;
+}
+.members-information article{
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    display: flex;
+    padding-top: 0;
+    padding: 10px;
+    align-items: center;
+    cursor: default;
+}
+.members-information article div{
+    align-items: center;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+#works{
+    margin-top: 50px;
+}
+#works table{
+    width: 100%;
+    height: auto;
+    color: #c4c4c4;
+}
+#works table tr:first-child{
+    font-weight: 700;
+}
+#works table tr td{
+    width: calc(100%/3);
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    
+    background-color: #262A4B;
+    background: linear-gradient(90deg,transparent,#7a4de31d,transparent);
+    padding: 10px;
+    padding-top: 15px;
+    box-shadow: 0 10px 10px #794DE3; 
+    text-shadow: 0 5px 5px #794DE3; 
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+}
+.about-us-text{
+    margin-bottom: 0px;
+}
+#contact-us{
+    margin-top: 100px;
+    padding-top: 80px;
+}
+
+.nilufar-profile{
+    border-radius: 50%;
+}
+.contact-us{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #ededed;
+    margin-bottom: 50px;
+}
+.contact-text-and-form{
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+}
+.contacts{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    color: #c4c4c4;
+}
+.footer-text-name{
+    font-weight: 600;
+}
+.hour-of-code-text{
+    font-size: 24px;
+    padding: 15px;
+    padding-right: 500px;
+
+}
+.hour-of-code-img{
+    position: absolute;
+    right: -195px;
+    top: -30%;
+    border-radius: 50%;
+}
+.hour-of-code-img img{
+    width: 700px;
+    box-shadow: 0 10px 10px #794DE3; 
+    border-radius: 50%;
+}
+
+@keyframes laptopAnimation{
+    0%   {transform: rotate(7deg)}
+    25%  {transform: rotate(-15deg)}
+    50%  {transform: rotate(10deg)}
+    75%  {transform: rotate(-15deg)}
+    100% {transform: rotate(7deg)}
+}
+.body-div{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+.loading-page-laptop{
+    width: 200px;
+    animation: laptopAnimationLoading;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes laptopAnimationLoading{
+    0%   {transform: rotate(-50deg)}
+    50%  {transform: rotate(720deg)}
+    100% {transform: rotate(-50deg)}
+}
+
