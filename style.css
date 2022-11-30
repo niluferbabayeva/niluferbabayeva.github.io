@@ -16,10 +16,7 @@ body{
     background-repeat: no-repeat;
     background-position: bottom;
 }
-.fake-logo{
-    opacity: 0;
-    pointer-events: none;
-}
+
 .container{
     width: 1310px;
     margin: 0 auto;
@@ -27,10 +24,7 @@ body{
 header.active{
     z-index: 2;
 }
-.logo{
-    opacity: 0;
-    pointer-events: none;
-}
+
 header{
     display: flex;
     justify-content: space-between;
